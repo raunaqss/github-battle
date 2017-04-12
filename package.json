@@ -24,7 +24,7 @@
     "url": "https://github.com/raunaqss/github-battle/issues"
   },
   "homepage": "https://github.com/raunaqss/github-battle#readme",
-  "bable": {
+  "babel": {
     "presets": [ "env", "react" ]
   },
   "devDependencies": {
