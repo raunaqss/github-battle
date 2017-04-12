@@ -2,6 +2,8 @@
 
 ## Example react project for the React Fundamentals course on ReactTraining.com
 
+### Updated for React v15.5 warning's for future deprecations and React Router v4
+
 The course instructor Tyler Mcginnis implements this project through the videos, this is my implementation of the same.
 
 To test this on your machine:
