@@ -11,3 +11,5 @@ To test this on your machine:
 - Go to repository's root directory
 - Use command `npm install` to install all dependencies (react, webpack, et cetera)
 - Enter command `npm run start` to open the project on `localhost:8080`
+
+**My notes summarising the course material can be found here: https://www.evernote.com/l/ATZmTEt6RLpD9Kv3FL4hNJBhqhSk3ySSjVY**
