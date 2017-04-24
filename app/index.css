@@ -130,3 +130,20 @@ li {
   font-size: 30px;
   font-weight: 200;
 }
+
+.reset {
+  border: none;
+  background: transparent;
+  display: block;
+  color: #d0021b;
+  width: 100%;
+  text-align: center;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
+
+.reset:focus {
+  outline: none;
+}
