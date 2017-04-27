@@ -12,4 +12,4 @@ To test this on your machine:
 - Use command `npm install` to install all dependencies (react, webpack, et cetera)
 - Enter command `npm run start` to open the project on `localhost:8080`
 
-**Detailed notes summarising the course material can be found here: https://www.evernote.com/l/ATZmTEt6RLpD9Kv3FL4hNJBhqhSk3ySSjVY**
+**Detailed notes summarising the course material can be found here: https://github.com/raunaqss/github-battle/blob/master/Notes.md**
