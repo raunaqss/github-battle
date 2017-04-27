@@ -166,8 +166,7 @@ Important thing to note:
 The JSX dom representation that a react component returns should be wrapped in a single DOM container element (which can be any html element objects or a react component). In short, don’t return multiple DOM or react components without wrapping them in a single container.
 
 __Any react component we want to make, should be:__
-![principles for a react component]
-(http://i.imgur.com/72dYgU2.png)
+![principles for a react component](http://i.imgur.com/72dYgU2.png)
 
 __*Quiz*__
 
@@ -227,8 +226,7 @@ Now coming to the life cycle events that triggered when the component receives n
 * `componentWillReceiveProps` - for times when you want to execute some code whenever your component receives props
 * `shouldComponentUpdate` - allows us to add another condition which should return true for react to re-render that component (and obviously its children)
 
-![react component's life cycle events]
-(http://i.imgur.com/undefined.png)
+![react component's life cycle events](http://i.imgur.com/undefined.png)
 
 
 __*Making Ajax Requests*__
@@ -340,8 +338,7 @@ In case of there being more components inside the opening and closing tag of a c
 
 So simply put, props.children is whatever is between the `<Opening>` and closing `</Opening>` blocks of a component.
 
-![example of how this.props.children works]
-(http://i.imgur.com/hQe7cs5.png)
+![example of how this.props.children works](http://i.imgur.com/hQe7cs5.png)
 
 This picture simply explains how this is useful to us while creating our components in JSX. So components that have an opening and closing tag—include `props.children` in the ui they return to keep a section of their ui dynamic. So while creating the component, we can pass in any relevant ui as its child.
 
