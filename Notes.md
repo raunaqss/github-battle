@@ -166,6 +166,7 @@ Important thing to note:
 The JSX dom representation that a react component returns should be wrapped in a single DOM container element (which can be any html element objects or a react component). In short, don’t return multiple DOM or react components without wrapping them in a single container.
 
 __Any react component we want to make, should be:__
+
 ![principles for a react component](http://i.imgur.com/72dYgU2.png)
 
 __*Quiz*__
@@ -226,7 +227,7 @@ Now coming to the life cycle events that triggered when the component receives n
 * `componentWillReceiveProps` - for times when you want to execute some code whenever your component receives props
 * `shouldComponentUpdate` - allows us to add another condition which should return true for react to re-render that component (and obviously its children)
 
-![react component's life cycle events](http://i.imgur.com/undefined.png)
+![react component's life cycle events](http://i.imgur.com/3LkFtGd.png)
 
 
 __*Making Ajax Requests*__
