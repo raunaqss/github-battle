@@ -347,6 +347,16 @@ This picture simply explains how this is useful to us while creating our compone
 
 __*Defaulting props with defaultProps*__
 
+An important advantage of using the React library is reusable components that can even be used between different projects. Being able to specify `defaultProps` for a component makes designing reusable components a lot simpler. It enables different users to use the component as it is or with customized `props` suited to their use within their project.
+
+We make the `<Loading />` component more reusable by specifying `defaultProps` for it so that different users can either use it as it is or by changing `props` as needed.
+
+__*Video*__
+
+The `Loading` component has two `props`: `text` and `speed` for which we provide default values and specify prop types. Users of the `Loading` component can either default on the text "Loading" with dots added to it every 300 miliseconds or change the text and the speed how they like.
+
+For the dot animation effect, we updated the component's state continuosly between an interval specified by the `speed` prop; this happens in the life-cycle event `componentDidMount`. If we don't clear this interval when the `componentWillUnmount` the state of this component will keep updating till the app's instance shuts down. So the interval is referenced to a property `interval` of the component which is then used to clear the interval when the component unmounts.
+
 
 
 
