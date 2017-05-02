@@ -357,6 +357,26 @@ The `Loading` component has two `props`: `text` and `speed` for which we provide
 
 For the dot animation effect, we updated the component's state continuosly between an interval specified by the `speed` prop; this happens in the life-cycle event `componentDidMount`. If we don't clear this interval when the `componentWillUnmount` the state of this component will keep updating till the app's instance shuts down. So the interval is referenced to a property `interval` of the component which is then used to clear the interval when the component unmounts.
 
+## Building for Production
+
+When building our project for production, we're gonna need the JavaScript in `index_bundle.js` to be minified and we're gonna need React to be compiled for production (without warning and unnecessary console logs) rather than development.
+
+In order to achieve this, we modify the webpack configuration object exported from `webpack.config.js`.
+    * We conditionally add a couple items to the `plugins` property of the `config` object if the process' `NODE_ENV` property says `'production'`.
+        * 1st item: we define a `new` plugin using `webpack.DefinePlugin` which makes the `NODE_ENV` property of `process.env` equal to `'production'`. __This `NODE_ENV='production'` is for the code that webpack is compiling.__ Whereas, the one in the condition, was for the code that compiles our project (i.e. the code in `webpack.config.js`).
+        * 2nd item: an instance of `webpack.optimize.UglifyJsPlugin()` for webpack to minify and uglify all the JavaScript in `index_bundle.js`. This makes it impossible for other devs to imitate our application using dev tools.
+
+Lastly, we add a script `"build"` to the npm `"scripts"` in `package.json`; it says:
+    `NODE_ENV='production' webpack -p`
+
+Now when we run `npm run build` from our project directory, webpack will build our project in the `dist` subdirectory of our project. The `NODE_ENV='production'` is essential to pass the condition specified in `webpack.config.js` to add production plugins to the `config` object. `webpack -p` simply tells webpack to build for production.
+
+__*Installing modules locally rather than globally*__
+
+When installing `firebase-tools`, Tyler gives an awesome suggestion to avoid installing npm modules globally and to refer their commands from within scripts in `package.json` instead. Since when the commands run from there, they refer to the locally installed node modules and don't require us to install them globally. Another example of this is how we use webpack in this project. If we want to refer to webpack from our command line, npm will require us to install it globally.
+
+There's nothing wrong with installling modules globally, except that our project will be forced to use the most updated version of that module. Which will create problems when incompatible updates are made to the module.
+
 
 
 
