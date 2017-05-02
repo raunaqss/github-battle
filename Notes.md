@@ -173,7 +173,7 @@ __*Quiz*__
 
 The above purity means that we should treat props as immutable from within components (or their render method).
 
-The “this” keyword + Managing and Updating State
+The `this` keyword + Managing and Updating State
 The this keyword
 
 When invoking a method, the keyword this within its body refers to the object the method is a property of (the method will be invoked on an instance of that object, which will be on the left of the method invocation before the dot notation). In different situations the value of the this keyword is not very obvious and requires a thorough understanding of the different ways JavaScript binds the this keyword (which acts as context in functions/methods).
@@ -343,7 +343,9 @@ So simply put, props.children is whatever is between the `<Opening>` and closing
 
 This picture simply explains how this is useful to us while creating our components in JSX. So components that have an opening and closing tag—include `props.children` in the ui they return to keep a section of their ui dynamic. So while creating the component, we can pass in any relevant ui as its child.
 
+## Building a Highly Reusable React Component
 
+__*Defaulting props with defaultProps*__
 
 
 
